@@ -52,4 +52,5 @@ $(function() {
 });
 
 console.log(mdTree);
-var vm = new ViewModel(new mdTree.FileSystemDAL('/home/rodrigo/workspace.fp/test'));
+var homePath = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
+var vm = new ViewModel(new mdTree.FileSystemDAL(homePath + '/workspace.fp/test'));
