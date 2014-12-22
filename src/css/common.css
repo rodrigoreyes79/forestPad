@@ -1,0 +1,82 @@
+#title {
+	background-color: #CFD8DC;
+	padding-left: 10px;
+}
+#index{
+	background-color: #607D8B;
+}
+#tree {
+	text-align: center;
+}
+#tree select {
+	display: inline;
+	width: 95%;
+}
+#editor {
+	resize: none;
+	width: 100%;
+	border: none;
+	padding:10px;
+	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+}
+#editor:focus {
+	outline: none;
+}
+
+#index ul {
+	padding-left: 15px;
+	list-style-type: none;
+}
+#index ul.dragging:hover ul {
+	min-height: 15px;
+	outline: 1px dashed #bbb;
+}
+#index ul.dragging:hover div.childrenPanel {
+	display: block !important;
+	visibility: visible !important;
+}
+
+#index ul.root {
+	padding-left: 0px;
+	color:white;
+}
+
+#index ul li div.txt {
+	cursor: move;
+	padding:3px 10px;
+}
+
+#index ul li div.txt:hover {
+	background-color: #78909C;
+}
+#index ul li div.txt.selected {
+	background-color: #CFD8DC;
+	color: black;
+}
+.placeholder {
+	outline: 1px dashed #bbb !important;
+	height: 25px;
+	display: block !important;
+}
+#editBtn {
+	position: relative;
+	top:20px;
+	right: 20px;
+}
+.invisible {
+	display:none;
+}
+.toggle.glyphicon {
+	border: 1px solid white;
+	font-size: 7px;
+	padding: 2px;
+	top: -1px;
+	cursor: pointer;
+}
+.toggle.glyphicon.disabled {
+	opacity: 0.25;
+	cursor: move !important;
+}
+.selected .toggle.glyphicon {
+	border: 1px solid black;
+}
