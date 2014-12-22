@@ -144,7 +144,7 @@ var ViewModel = function(dal) {
 		var model = new NodeModel(data.id, data.name, data.closed, data.selected, children);
 		if(model.selected()){
 			console.log('selecting node ' + model.id());
-			this.presentNode = model;
+			this.selectNode(model);
 		}
 		return model;
 	}
