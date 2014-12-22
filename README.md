@@ -15,3 +15,9 @@ I am scratching my own itch here. I am creating a tool I am comfortable with for
 ## Why "ForestPad"?
 
 Because each group of documents may be organized using one or more "trees" (hence, you end up building a "forest"). Neat name, ah? :)
+
+# Installation
+1. Download and install node-webkit on your computer following the instructions at https://github.com/rogerwang/node-webkit#downloads.
+2. Make sure to add the node-webkit executable to your path.
+3. Download or clone the repository.
+4. Go to the src folder and execute "nw ."
