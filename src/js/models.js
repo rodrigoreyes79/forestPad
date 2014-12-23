@@ -46,6 +46,8 @@ var NodeModel = function(id, name, closed, selected, children) {
 	this.closed = ko.observable(closed);
 	this.selected = ko.observable(selected);
 	
+	this.editMode = ko.observable(false);
+	
 	// Binding changes
 	self.notifyTreeChange = function(){
 		amplify.publish('treeChange');
@@ -156,6 +158,7 @@ var ViewModel = function(dal) {
 			self.dal.updateMd(self.presentNode, self.page.md());
 			self.presentNode.md(self.page.md());
 			self.presentNode.selected(false);
+			if(data.id() != self.presentNode.id()) self.presentNode.editMode(false);
 		}
 		
 		self.previousNode = self.presentNode;
@@ -221,6 +224,15 @@ var ViewModel = function(dal) {
 			}
 		}
 		return p;
+	}
+	
+	this.editNode = function(data){
+		data.editMode(true);
+	}
+	
+	this.saveNode = function(data){
+		data.editMode(false);
+		self.persistTree();
 	}
 	
 	this.toggleNode = function(data){

@@ -31,7 +31,10 @@
 				<script id="childTmpl" type="text/html"><li>
 						<div class="txt" data-bind="click: $root.selectNode, css: {selected: selected()}">
 							<span class="toggle glyphicon" aria-hidden="true" data-bind="click: $root.toggleNode, css: { disabled: children().length < 1,'glyphicon-plus': closed(), 'glyphicon-minus': children().length < 1 || !closed() }"></span> 
-							<span data-bind="text: name"></span>
+							<span data-bind="visible: !editMode(), text: name, event: { dblclick: $root.editNode }"></span>
+							<span data-bind="visible: editMode()">
+								<input type="text" data-bind="value: name, event: { blur: $root.saveNode }"/>
+							</span>
 						</div>
 						<div class="childrenPanel" data-bind="css:{invisible: closed}"><ul data-bind="sortable: { template: 'childTmpl', data: children, options: {placeholder: 'placeholder', forceHelperSize: true, forcePlaceholderSize: true} }" class="childTree"/></div></li></script>
             </div>
