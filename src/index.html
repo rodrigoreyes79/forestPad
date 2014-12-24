@@ -33,7 +33,7 @@
 							<span class="toggle glyphicon" aria-hidden="true" data-bind="click: $root.toggleNode, css: { disabled: children().length < 1,'glyphicon-plus': closed(), 'glyphicon-minus': children().length < 1 || !closed() }"></span> 
 							<span data-bind="visible: !editMode(), text: name, event: { dblclick: $root.editNode }"></span>
 							<span data-bind="visible: editMode()">
-								<input type="text" data-bind="value: name, event: { blur: $root.saveNode }"/>
+								<input type="text" data-bind="attr: {id: 'nodeEditor-' + id() }, value: name, event: { blur: $root.saveNode }" class="nodeEditor"/>
 							</span>
 						</div>
 						<div class="childrenPanel" data-bind="css:{invisible: closed}"><ul data-bind="sortable: { template: 'childTmpl', data: children, options: {placeholder: 'placeholder', forceHelperSize: true, forcePlaceholderSize: true} }" class="childTree"/></div></li></script>

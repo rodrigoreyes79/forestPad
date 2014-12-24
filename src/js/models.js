@@ -228,6 +228,7 @@ var ViewModel = function(dal) {
 	
 	this.editNode = function(data){
 		data.editMode(true);
+		$("#nodeEditor-" + data.id()).focus();
 	}
 	
 	this.saveNode = function(data){
