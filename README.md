@@ -3,10 +3,13 @@ forestPad
 
 An outliner that allows to organize a group of documents using one or more indexes (trees).
 
-![Early preview image]
-(https://raw.githubusercontent.com/rodrigoreyes79/forestpad/master/images/forestpad.png)
+![Mockup]
+(https://raw.githubusercontent.com/rodrigoreyes79/forestpad/master/images/mockup.png)
 
 **IMPORTANT**: This is an early preview. Still needs lots of work.
+
+![Early preview image]
+(https://raw.githubusercontent.com/rodrigoreyes79/forestpad/master/images/forestpad.png)
 
 ## Why another outliner?
 
